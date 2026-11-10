@@ -1,0 +1,16 @@
+id,file,format,purpose,notes
+T01,pdf-small-text.pdf,PDF,baseline render,5 pages with outline
+T02,pdf-100mb.pdf,PDF,NFR-3 first page under 2 s,generate with make_testlib.py
+T03,pdf-scanned.pdf,PDF,image-only pages,no text layer
+T04,pdf-corrupt.pdf,PDF,NFR-21,truncated file
+T05,epub2-basic.epub,EPUB,EPUB 2 render,
+T06,epub3-basic.epub,EPUB,EPUB 3 render,
+T07,epub3-20mb.epub,EPUB,NFR-4,generate
+T08,epub-fixed-layout.epub,EPUB,FR-4.8,
+T09,epub-rtl.epub,EPUB,FR-4.10 RTL,Arabic or Hebrew sample
+T10,epub-malicious.epub,EPUB,FR-4.9 and NFR-14,script tag and remote image (inert payloads only)
+T11,not-a-pdf.pdf,fake,FR-2.3 magic bytes,text file renamed
+T12,not-an-epub.epub,fake,FR-2.3 magic bytes,zip without mimetype
+T13,oversize.pdf,PDF,FR-2.3 500 MB limit,sparse file
+T14,duplicate-of-T01.pdf,PDF,FR-2.12,byte-identical copy
+T15,unicode-title-日本語.epub,EPUB,NFR-24,non-Latin metadata

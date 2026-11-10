@@ -1,0 +1,10 @@
+node_modules/
+target/
+dist/
+out/
+*.log
+testlib/files/
+installer/build/
+installer/mysql/
+.idea/
+.vscode/

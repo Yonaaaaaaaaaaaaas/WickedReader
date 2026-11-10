@@ -1,0 +1,109 @@
+ID,Requirement,Priority,Sprint,Status
+FR-1.1,The system shall work without registration or login; the first launch shall create a local profile automatically.,M,S1,Backlog
+FR-1.2,The system shall let the user set an optional profile name and avatar.,C,S11,Backlog
+FR-1.3,The system shall let the user enable an optional app lock (PIN or password) required at launch and after a configurable idle time.,S,S11,Backlog
+FR-1.4,The system shall store the app lock secret only as a salted hash (BCrypt or Argon2).,S,S11,Backlog
+FR-1.5,The system shall allow a forgotten app lock to be reset only by erasing all application data after a clear confirmation.,S,S11,Backlog
+FR-1.6,"The system shall let the user delete all application data (library, files, settings) from Settings after confirmation.",S,S10,Backlog
+FR-1.7,"The system shall support multiple local profiles, each with a separate library.",C,S11,Backlog
+FR-2.1,"The system shall import PDF and EPUB files via a file picker, drag-and-drop onto the window, recursive folder import, and Explorer's Open with, including many files at once.",M,S2,Backlog
+FR-2.2,"The system shall copy imported files into the application library folder by default, with an optional mode that only links to the original path and warns when a link is broken.",M,S2,Backlog
+FR-2.3,The system shall validate imports by extension and file signature (magic bytes) and reject files above a configurable maximum size (default 500 MB).,M,S2,Backlog
+FR-2.4,The system shall show import progress and report success or failure per file.,M,S2,Backlog
+FR-2.5,"The system shall automatically extract title, author, language, page count (where available), and cover image from each file.",M,S2,Backlog
+FR-2.6,The system shall generate a cover thumbnail from the first PDF page when no cover is embedded.,S,S2,Backlog
+FR-2.7,"The system shall let users edit book metadata (title, author, description, tags) and replace the cover.",M,S3,Backlog
+FR-2.8,"The system shall let users remove a book from the library, with an option to also delete the stored copy; progress and annotations are removed after confirmation.",M,S3,Backlog
+FR-2.9,"The system shall display the library in grid and list views with sorting (title, author, date added, last read, progress).",M,S3,Backlog
+FR-2.10,The system shall let users create collections or shelves and assign books to one or more of them.,S,S9,Backlog
+FR-2.11,"The system shall let users mark favorites and shall show reading status (Not started, Reading, Finished).",S,S3,Backlog
+FR-2.12,The system shall detect duplicate imports using a file hash and warn the user.,S,S2,Backlog
+FR-2.13,The system shall provide a Continue Reading section showing recently opened books.,M,S3,Backlog
+FR-2.14,The system shall let the user watch a folder and import new files placed in it automatically.,C,S9,Backlog
+FR-2.15,The installer shall offer to register the app for .pdf and .epub files so a double-click opens them in Wicked Reader.,S,S12,Backlog
+FR-3.1,The system shall render PDF pages in the reader window using canvas with a text layer so text is selectable.,M,S4,Backlog
+FR-3.2,The system shall support continuous scroll mode and single-page and two-page (spread) modes.,M,S4,Backlog
+FR-3.3,"The system shall support zoom (fit width, fit page, custom percentage from 25% to 500%) and pinch-to-zoom on touch devices.",M,S4,Backlog
+FR-3.4,The system shall support page rotation.,S,S4,Backlog
+FR-3.5,The system shall display the PDF outline (bookmarks) as a navigable table of contents when present.,M,S4,Backlog
+FR-3.6,The system shall provide a page thumbnail sidebar for quick navigation.,S,S4,Backlog
+FR-3.7,The system shall allow jumping to a page number and navigating with keyboard shortcuts and touch swipe.,M,S4,Backlog
+FR-3.8,The system shall load pages lazily and read the file from the local service with HTTP range requests so large PDFs open quickly.,M,S4,Backlog
+FR-3.9,The system shall provide a dark reading mode for PDFs (color inversion filter) with adjustable brightness and contrast.,S,S4,Backlog
+FR-3.10,The system shall support following internal links and open external links in the default browser safely.,M,S4,Backlog
+FR-4.1,"The system shall render EPUB 2 and EPUB 3 content with reflowable text, images, and embedded CSS.",M,S5,Backlog
+FR-4.2,The system shall support paginated mode (page-turn) and continuous scroll mode.,M,S5,Backlog
+FR-4.3,"The system shall allow users to change font family, font size, line height, margins, and text alignment.",M,S6,Backlog
+FR-4.4,"The system shall provide themes: Light, Sepia, Dark, Night (true black), and a custom theme with user-defined colors.",M,S6,Backlog
+FR-4.5,The system shall display the EPUB table of contents and allow navigation by chapter.,M,S5,Backlog
+FR-4.6,The system shall show reading position as percentage and estimated time left in chapter and book.,S,S6,Backlog
+FR-4.7,The system shall support single-page and two-page layouts depending on viewport width.,S,S5,Backlog
+FR-4.8,The system shall handle fixed-layout EPUBs where supported by the rendering library.,C,S5,Backlog
+FR-4.9,The system shall sanitize EPUB content to block scripts and unsafe external resources.,M,S5,Backlog
+FR-4.10,The system shall support right-to-left languages and vertical writing where supported by the renderer.,C,S5,Backlog
+FR-5.1,The system shall provide full-text search within the open book (PDF and EPUB) with a result list showing context snippets.,M,S7,Backlog
+FR-5.2,The system shall highlight search matches in the page and allow next and previous match navigation.,M,S7,Backlog
+FR-5.3,The system shall support case-sensitive and whole-word search options.,C,S7,Backlog
+FR-5.4,The system shall allow jumping directly to a search result.,M,S7,Backlog
+FR-6.1,"The system shall automatically save the reading position (page number for PDF, CFI for EPUB) and percentage while the user reads.",M,S6,Backlog
+FR-6.2,The system shall resume each book at its last saved position and offer a setting to reopen the last book at launch.,M,S6,Backlog
+FR-6.3,The system shall debounce progress saves (for example every 5 seconds or on page change) and flush any pending save when the window closes.,M,S6,Backlog
+FR-6.4,"The system shall track reading sessions (start time, duration) to produce reading statistics.",S,S7,Backlog
+FR-6.5,The system shall commit progress and annotation changes transactionally so a crash or forced shutdown loses at most the last few seconds of progress.,M,S6,Backlog
+FR-6.6,The system shall let the user export and import progress and annotations as a JSON file to move between PCs.,S,S9,Backlog
+FR-7.1,"The system shall allow users to add, view, and delete bookmarks at the current position with an optional label.",M,S8,Backlog
+FR-7.2,The system shall allow users to select text and highlight it in a choice of at least five colors.,M,S8,Backlog
+FR-7.3,The system shall allow users to attach a note to any highlight or position and edit or delete it.,M,S8,Backlog
+FR-7.4,The system shall persist highlights and re-render them accurately when the book is reopened or the layout changes.,M,S8,Backlog
+FR-7.5,"The system shall provide an annotations panel listing bookmarks, highlights, and notes with click-to-jump.",M,S8,Backlog
+FR-7.6,"The system shall allow exporting annotations of a book as Markdown, PDF, or JSON.",S,S9,Backlog
+FR-7.7,The system shall provide a copy-with-citation option for selected text.,C,S8,Backlog
+FR-7.8,The system shall provide a dictionary lookup for selected words.,C,S8,Backlog
+FR-8.1,"The system shall store reader preferences per profile (theme, font, size, spacing, layout mode) and apply them on every launch.",M,S6,Backlog
+FR-8.2,The system shall allow overriding preferences per book.,C,S6,Backlog
+FR-8.3,The system shall provide a distraction-free full-screen mode where the toolbar auto-hides.,M,S4,Backlog
+FR-8.4,The system shall provide a keyboard shortcut help overlay.,S,S7,Backlog
+FR-8.5,The system shall offer an application-wide light and dark UI theme following system preference by default.,S,S3,Backlog
+FR-8.6,The system shall provide smooth page-turn and transition animations that can be disabled by the user (reduced motion).,S,S6,Backlog
+FR-9.1,"The system shall start the local service and MySQL automatically at launch, wait for readiness, and show a clear error screen with a Retry button and a link to the logs if either fails.",M,S1,Backlog
+FR-9.2,The system shall allow only one running instance; a second launch shall focus the existing window and open the requested file.,M,S1,Backlog
+FR-9.3,"The system shall back up the library (database dump, book files, covers, settings) to a user-chosen ZIP file and restore from it.",M,S10,Backlog
+FR-9.4,"The system shall show app version, data folder location, book count, and storage used in Settings.",S,S10,Backlog
+FR-9.5,The system shall let the user view and export application logs for troubleshooting.,S,S10,Backlog
+FR-9.6,The uninstaller shall ask whether to keep or remove user data.,S,S12,Backlog
+FR-9.7,"The system shall offer scheduled automatic backups (daily or weekly, keeping the last N).",C,S10,Backlog
+FR-9.8,"The system shall check for updates only when the user enables it, and make no other network calls.",C,S10,Backlog
+NFR-1,See SRS section 8,,"S1,S12,S13",Backlog
+NFR-2,See SRS section 8,,S3,Backlog
+NFR-3,See SRS section 8,,S4,Backlog
+NFR-4,See SRS section 8,,S5,Backlog
+NFR-5,See SRS section 8,,S4,Backlog
+NFR-6,See SRS section 8,,S6,Backlog
+NFR-7,See SRS section 8,,"S0,S1,S13",Backlog
+NFR-8,See SRS section 8,,"S1,S13",Backlog
+NFR-9,See SRS section 8,,S1,Backlog
+NFR-10,See SRS section 8,,S1,Backlog
+NFR-11,See SRS section 8,,S1,Backlog
+NFR-12,See SRS section 8,,S11,Backlog
+NFR-13,See SRS section 8,,S1,Backlog
+NFR-14,See SRS section 8,,"S5,S8",Backlog
+NFR-15,See SRS section 8,,S2,Backlog
+NFR-16,See SRS section 8,,S12,Backlog
+NFR-17,See SRS section 8,,S2,Backlog
+NFR-18,See SRS section 8,,S2,Backlog
+NFR-19,See SRS section 8,,S1,Backlog
+NFR-20,See SRS section 8,,S10,Backlog
+NFR-21,See SRS section 8,,"S2,S4,S5",Backlog
+NFR-22,See SRS section 8,,S13,Backlog
+NFR-23,See SRS section 8,,S13,Backlog
+NFR-24,See SRS section 8,,S3,Backlog
+NFR-25,See SRS section 8,,"S6,S13",Backlog
+NFR-26,See SRS section 8,,S12,Backlog
+NFR-27,See SRS section 8,,"S0,S12",Backlog
+NFR-28,See SRS section 8,,S12,Backlog
+NFR-29,See SRS section 8,,S10,Backlog
+NFR-30,See SRS section 8,,S1+,Backlog
+NFR-31,See SRS section 8,,S13,Backlog
+NFR-32,See SRS section 8,,S1,Backlog
+NFR-33,See SRS section 8,,S1,Backlog
+NFR-34,See SRS section 8,,"S3,S8,S13",Backlog

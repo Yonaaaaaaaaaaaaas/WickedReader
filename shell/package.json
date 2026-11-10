@@ -1,0 +1,22 @@
+{
+  "name": "wicked-reader-shell",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "lint": "node --check main.js && node --check preload.js"
+  },
+  "devDependencies": {
+    "electron": "45.2.3",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "app.wickedreader",
+    "productName": "Wicked Reader",
+    "files": ["main.js", "preload.js", "../ui/**/*"],
+    "win": { "target": "nsis" },
+    "nsis": { "oneClick": false, "perMachine": false, "allowToChangeInstallationDirectory": true }
+  }
+}
